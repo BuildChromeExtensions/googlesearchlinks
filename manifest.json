@@ -1,0 +1,24 @@
+{
+    "name": "Search Links",
+    "manifest_version": 3,
+    "version": "1.0.0.0",
+    "action": {
+        "default_popup": "popup.html" 
+    },
+    "permissions": [
+        "storage"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.google.com/search*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
+}
